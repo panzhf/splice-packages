@@ -1,0 +1,318 @@
+{
+  "pages": [
+    // #ifdef H5-ACT
+    {
+      "path": "pages/lotto/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/0/index",
+      "style": {
+        "navigationBarTitleText": "期期抽奖",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/0/explain",
+      "style": {
+        "navigationBarTitleText": "活动说明",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/0/points",
+      "style": {
+        "navigationBarTitleText": "积分兑机会，一起抽大奖！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/1/index",
+      "style": {
+        "navigationBarTitleText": "期期抽奖",
+        "onReachBottomDistance": 50,
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/1/explain",
+      "style": {
+        "navigationBarTitleText": "活动说明",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/1/payout",
+      "style": {
+        "navigationBarTitleText": "派发抽奖机会啦！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/1/payout-fail",
+      "style": {
+        "navigationBarTitleText": "派发抽奖机会啦！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/1/scanqrcode",
+      "style": {
+        "navigationBarTitleText": "期期抽奖",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/index",
+      "style": {
+        "navigationBarTitleText": "期期抽奖",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/explain",
+      "style": {
+        "navigationBarTitleText": "活动说明",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/points",
+      "style": {
+        "navigationBarTitleText": "积分兑机会，一起抽大奖！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/payout",
+      "style": {
+        "navigationBarTitleText": "派发抽奖机会啦！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/payout-fail",
+      "style": {
+        "navigationBarTitleText": "派发抽奖机会啦！",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/lotto/2/scanqrcode",
+      "style": {
+        "navigationBarTitleText": "期期抽奖",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/puzzle/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/guessing/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/turntable/index",
+      "style": {
+        "enablePullDownRefresh": true,
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/tap/index",
+      "style": {
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/rebate/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/rebate/record",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "上传记录"
+      }
+    },
+    {
+      "path": "pages/rebate/detail",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "记录详情"
+      }
+    },
+    {
+      "path": "pages/gift-registration/index",
+      "style": {
+        "navigationBarTitleText": "礼品领取登记",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/gift-registration/success",
+      "style": {
+        "navigationBarTitleText": "登记成功",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/gift-registration/records",
+      "style": {
+        "navigationBarTitleText": "我的填写记录",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/gift-registration/record-detail",
+      "style": {
+        "navigationBarTitleText": "填写详情",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    }
+    // #endif
+    // #ifdef H5-SCAN
+    {
+      "path": "SaoMa/SaomaUniappTemp",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "SaoMa/transfer",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/ssq/index",
+      "style": {
+        "navigationBarTitleText": "开运上上签",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/shoot-ball/index",
+      "style": {
+        "navigationBarTitleText": "点球有礼",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/custom-scan/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/custom-guide-scan/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/custom-store-scan/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "scan-templates/error-page",
+      "style": {
+        "navigationBarTitleText": "温馨提示",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "write-off/index",
+      "style": {
+        "navigationBarTitleText": "核销结果",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    }
+    // #endif
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f8f8f8"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-ui-v1/components/u-$1/u-$1.vue",
+      "md-(.*)": "@/components/easycom/md-$1.vue"
+    }
+  }
+}

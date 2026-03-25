@@ -1,0 +1,142 @@
+.page-gift-registration {
+  min-height: 100vh; 
+}
+
+.gift-header {
+  padding: 30rpx 20rpx 10rpx;
+  color: #222;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.gift-form-section {
+  background: #fff;
+  padding: 30rpx 30rpx 1rpx 30rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 6rpx 4rpx rgba(228, 232, 255, 0.6);
+
+}
+
+.submit-btn-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  z-index: 100;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 45rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.gift-records-page {
+  min-height: 100vh;
+  padding: 20rpx;
+  background: #f5f5f5;
+}
+
+.record-summary {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  color: #222;
+}
+
+.record-list {
+  .record-item {
+    background: #fff;
+    padding: 30rpx 24rpx;
+    border-radius: 12rpx;
+    margin-bottom: 24rpx;
+  }
+
+  .record-content {
+    min-width: 0;
+  }
+
+  .record-title {
+    font-size: 28rpx;
+    color: #333;
+    .record-bullet {
+      margin-right: 8rpx; 
+    }
+  }
+
+  .record-time {
+    font-size: 24rpx; 
+    margin-top: 12rpx;
+    color: #888888;
+  }
+
+  .record-arrow {
+    flex-shrink: 0;
+    width: 16rpx;
+    height: 16rpx;
+    margin-left: 16rpx;
+    border-top: 2rpx solid #3D3D3D;
+    border-right: 2rpx solid #3D3D3D;
+    transform: rotate(45deg);
+  }
+}
+
+.record-detail-page {
+  min-height: 100vh;
+  padding: 20rpx;
+}
+
+.detail-section {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+
+  .section-title {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10rpx;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 10rpx;
+
+    .info-label {
+      width: 160rpx;
+      color: #999;
+    }
+
+    .info-value {
+      flex: 1;
+      color: #222;
+      word-break: break-all;
+    }
+  }
+
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rpx;
+
+    .image-item {
+      width: 160rpx;
+      height: 160rpx;
+      border-radius: 6rpx;
+    }
+  }
+}

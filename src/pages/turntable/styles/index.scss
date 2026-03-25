@@ -1,0 +1,192 @@
+@import 'packages/styles/mixins.scss';
+$prefix: page-turntable;
+.#{$prefix} {
+  position: relative;
+  /* #ifdef H5 */
+  max-width: 960rpx;
+  margin: 0 auto;
+  /* #endif */
+  .bg {
+    position: absolute;
+    width: 100%;
+  }
+  .p-r{
+    position: relative;
+  }
+  .main {
+    position: relative;
+    height: 1004rpx;
+    overflow: hidden;
+  }
+  .bottom-bg {
+    position: absolute;
+    bottom: 0;
+  }
+  .time-box {
+    position: relative;
+    padding-top: 182rpx;
+    .time {
+      font-size: 24rpx;
+    }
+  }
+  .btn-group {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    padding-bottom: calc(20rpx + constant(safe-area-inset-bottom));
+    padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+    .icon {
+      @include wh(320rpx, 86rpx);
+      & + .icon {
+        margin-left: 30rpx;
+      }
+    }
+  }
+  .footer-gap {
+    height: 130rpx;
+    height: calc(130rpx + constant(safe-area-inset-bottom));
+    height: calc(130rpx + env(safe-area-inset-bottom));
+  }
+  &.skin-0, &.skin-1, &.skin-2, &.skin-9 {
+    .bottom-bg {
+      left: -8%;
+      @include wh(116%, 116rpx);
+    }
+  }
+  &.skin-2, &.skin-3 {
+  }
+
+  &.skin-0 {
+    background-color: #b3241c;
+    .time-box {
+      color: #ffdc44;
+    }
+    .btn-group {
+      background-color: #e54d38;
+    }
+  }
+  &.skin-1, &.skin-9 {
+    background-color: #fa3f50;
+    .time-box {
+      color: #ff4a48;
+    }
+    .btn-group {
+      background-color: #ff6969;
+    }
+  }
+  &.skin-2 {
+    background-color: #00a032;
+    .time-box {
+      color: #7b410a;
+    }
+    .btn-group {
+      background-color: #39c565;
+    }
+  }
+  &.skin-3 {
+    background-color: #40a45a;
+    .time-box {
+      color: #18754c;
+    }
+    .bottom-bg {
+      left: 0;
+      @include wh(100%, 84rpx);
+    }
+    .btn-group {
+      background-color: #2c8942;
+    }
+  }
+  &.skin-4 {
+    .main {
+      height: 1076rpx;
+    }
+    .time-box {
+      padding-top: 144rpx;
+      color: #ac5a38;
+    }
+    .bottom-bg {
+      @include wh(100%, 312rpx);
+    }
+    .btn-group {
+      background-color: #c8e4ff;
+    }
+  }
+  &.skin-5 {
+    background-color: #3faf58;
+    .main {
+      height: 1086rpx;
+    }
+    .time-box {
+      color: #ffdc44;
+    }
+    .bottom-bg {
+      @include wh(100%, 512rpx);
+    }
+    .btn-group {
+      background-color: #319247;
+    }
+  }
+  &.skin-6 {
+    background-color: #ffce41;
+    .main {
+      height: 990rpx;
+    }
+    .time-box {
+      padding-top: 312rpx;
+      color: #fff;
+      transform: rotate(-4deg);
+      .time {
+        font-size: 26rpx;
+      }
+    }
+
+    .bottom-bg {
+      bottom: -1rpx;
+      @include wh(100%, 210rpx);
+    }
+    .btn-group {
+      background-color: #ffca10;
+    }
+  }
+  &.skin-7 {
+    background-color: #fff;
+    .main {
+      height: 990rpx;
+    }
+    .time-box {
+      padding-top: 326rpx;
+      color: #fff;
+      .time {
+        font-size: 20rpx;
+      }
+    }
+
+    .bottom-bg {
+      @include wh(100%, 336rpx);
+    }
+    .btn-group {
+      background-color: rgba(44, 33, 83, .8);
+    }
+  }
+  &.skin-8 {
+    background-color: #610d1d;
+    background-repeat: no-repeat;
+    background-position: 0 660rpx;
+    background-size: 100%;
+    .main {
+      height: 1024rpx;
+    }
+    .time-box {
+      padding-top: 244rpx;
+      color: #ffd58a;
+    }
+
+    .btn-group {
+      background-color: rgba(147, 39, 50, .9);
+    }
+  }
+}

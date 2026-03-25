@@ -1,0 +1,184 @@
+@import 'packages/styles/mixins.scss';
+$prefix: base-turntable;
+.#{$prefix} {
+  position: relative;
+  margin: 0 30rpx;
+  @include box;
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    @include wh(690rpx);
+  }
+  .bg {
+    position: absolute;
+    z-index: 1;
+    @include wh(100%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  .prize-list {
+    position: relative;
+    z-index: 1;
+    @include wh(100%);
+    // &.animation-1 {
+    //   animation: rotate 0.8s linear infinite forwards;
+    // }
+    // &.animation-2 {
+    //   transition: transform 2.7s;
+    //   transition-timing-function: ease-out;
+    //   // transition-timing-function: cubic-bezier(.53,.36,.5,.97);
+    // }
+    .prize-item {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -90rpx;
+      @include wh(180rpx, 340rpx);
+      transform-origin: center bottom;
+    }
+    .name {
+      padding-top: 64rpx;
+      color: #c97e4a;
+    }
+    .icon {
+      @include wh(54rpx);
+    }
+    .line {
+      position: absolute;
+      z-index: 1;
+      width: 1px;
+      top: 46rpx;
+      left: 50%;
+      bottom: 0;
+      margin-left: -1px;
+      transform-origin: center bottom;
+    }
+  }
+  .light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    .item {
+      position: absolute;
+      top: 16rpx;
+      left: 338rpx;
+      @include wh(16rpx);
+      transform-origin: center 330rpx;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include wh(12rpx);
+        border-radius: 50%;
+        box-shadow: 0 0 20rpx #fff;
+        background-color: #fff;
+      }
+      &:nth-of-type(odd) {
+        &::after {
+          animation: lightAnimate 1s steps(1) infinite;
+        }
+      }
+      &:nth-of-type(even) {
+        &::after {
+          animation: lightAnimate 1s steps(1) infinite 0.5s;
+        }
+      }
+    }
+  }
+  .play-btn {
+    position: absolute;
+    z-index: 3;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include wh(175rpx, 209rpx);
+    &.disabled {
+      filter: grayscale(0.9);
+    }
+  }
+  &.skin-0, &.skin-1, &.skin-2, &.skin-9 {
+    .line {
+      background: linear-gradient(to bottom, #f0d7c9, #f7e1d5);
+    }
+  }
+  &.skin-3 {
+    .line {
+      background: linear-gradient(to bottom, #f5e4da, #f3efec);
+    }
+  }
+  &.skin-4, &.skin-5, &.skin-6 {
+    .line {
+      background: rgba(230,201,182,.3);
+    }
+  }
+  &.skin-7, &.skin-8 {
+    .line {
+      background: rgba(255, 255, 255,.3);
+    }
+  }
+  &.skin-6, &.skin-7 {
+    .prize-item {
+      top: 60rpx;
+      height: 284rpx;
+    }
+    .name {
+      font-size: 22rpx;
+      text-shadow: 4rpx 0 0 rgba(0,0,0,0.2), -4rpx 0 0 rgba(0,0,0,0.2), 0 4rpx 0 rgba(0,0,0,0.2), 0 -4rpx 0 rgba(0,0,0,0.2);
+    }
+    .icon {
+      @include wh(44rpx);
+    }
+    .play-btn.disabled {
+      filter: grayscale(0.6);
+    }
+  }
+  &.skin-6 {
+    top: -24rpx;
+    .name {
+      color: #ffc83a;
+    }
+  }
+  &.skin-7 {
+    top: -32rpx;
+    .name {
+      color: #fff;
+    }
+  }
+  &.skin-8 {
+    margin-top: 40rpx;
+    .play-btn.disabled {
+      filter: grayscale(0.7);
+    }
+  }
+}
+
+@keyframes lightAnimate {
+  0% {
+    @include wh(12rpx);
+    background: #fff;
+    box-shadow: 0 0 20rpx #fff;
+  }
+  50% {
+    @include wh(18rpx);
+    background: #feee99;
+    box-shadow: 0 0 20rpx #feee99;
+  }
+  100% {
+    @include wh(12rpx);
+    background: #fff;
+    box-shadow: 0 0 20rpx #fff;
+  }
+}
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

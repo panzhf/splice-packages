@@ -1,0 +1,156 @@
+@import 'packages/styles/mixins.scss';
+$prefix: win-list;
+.#{$prefix} {
+  padding: 10rpx 36rpx 0;
+  .title {
+    margin-bottom: 10rpx;
+    color: #fbf087;
+  }
+  .wrapper {
+    position: relative;
+  }
+  .swipper-container {
+    height: 366rpx;
+  }
+  .avatar {
+    @include wh(80rpx);
+  }
+  .prize-item {
+    position: relative;
+    height: 122rpx;
+    @include box();
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 100%;
+      height: 0;
+      border-bottom-color: #fff;
+      transform: scaleY(0.5);
+      border-bottom-width: 1px;
+      border-bottom-style: dashed;
+    }
+  }
+  .content {
+    line-height: 34rpx;
+    color: #fff;
+  }
+  .name {
+    margin-right: 4rpx;
+    color: #fbd439;
+  }
+  .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include wh(100%);
+  }
+  .empty-box {
+    height: 340rpx;
+    text-align: center;
+    color: #fff;
+  }
+  .place-icon {
+    @include wh(76rpx, 86rpx);
+    margin: 0 auto;
+  }
+  &.skin-3 {
+    .title {
+      color: #fff729;
+    }
+  }
+  &.skin-4 {
+    .title {
+      color: #fff;
+    }
+  }
+  &.skin-5, &.skin-6, &.skin-7, &.skin-8 {
+    .title {
+      margin-bottom: 30rpx;
+    }
+    .wrapper {
+      padding: 0 20rpx;
+      @include round(10rpx);
+    }
+  }
+  &.skin-5 {
+    .title {
+      color: #272b33;
+    }
+    .wrapper {
+      background-color: #319247;
+    }
+    .prize-item {
+      &::after {
+        border-bottom-color: #1b7b30;
+      }
+    }
+    .content {
+      color: #272b33;
+    }
+  }
+  &.skin-6 {
+    .title {
+      color: #4d2800;
+    }
+    .wrapper {
+      background-color: #fffac2;
+      border: 4rpx solid #f0ae00;
+    }
+    .prize-item {
+      &::after {
+        border-bottom-color: #feb800;
+      }
+    }
+    .content {
+      color: #f98100;
+    }
+    .name {
+      color: #7c4000;
+    }
+    .empty-box {
+      color: #4d2800;
+    }
+  }
+  &.skin-7 {
+    .title {
+      color: #ea5e4d;
+    }
+    .wrapper {
+      padding: 0;
+    }
+    .win-top {
+      position: absolute;
+      top: -10rpx;
+      height: 30rpx;
+    }
+    .swipper-container, .empty-box {
+      padding-top: 10rpx;
+      background-color: #ea5e4d;
+      border: 4rpx solid #f0f0f0;
+      @include round(10rpx);
+    }
+    .swipper-container {
+      padding-left: 20rpx;
+      padding-right: 20rpx;
+    }
+    .empty-box {
+      box-sizing: content-box;
+    }
+  }
+  &.skin-8 {
+    .title {
+      color: #ffa251;
+    }
+    .wrapper {
+      background-color: #8D2729;
+    }
+    .content {
+      color: #f0d4ab;
+    }
+    .name {
+      color: #ffa251;
+    }
+  }
+}

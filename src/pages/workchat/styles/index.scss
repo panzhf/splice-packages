@@ -1,0 +1,36 @@
+.workchat {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .content {
+    width: 100%;
+    .receive-view{
+      width: 480rpx;
+      height: 140rpx;
+      margin: 0 auto 50rpx;
+    }
+    .btn-receive {
+      width: 480rpx;
+      height: 140rpx;
+    }
+  }
+  .btn-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 48rpx;
+    left: 0;
+    .btn {
+      width: 320rpx;
+      height: 80rpx;
+      flex: 1;
+      text-align: center;
+    }
+  }
+}

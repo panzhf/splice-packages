@@ -1,0 +1,96 @@
+.page-group-buy {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .rule-icon {
+    position: absolute;
+    right: 0;
+    height: 72rpx;
+    background: rgba($color: #000000, $alpha: 0.3);
+    border-radius: 36rpx 0rpx 0rpx 36rpx;
+    color: #fff;
+    padding: 0 20rpx 0 24rpx;
+  }
+  .pd-box {
+    margin: 0 30rpx;
+    padding: 30rpx 40rpx;
+    .img {
+      width: 120rpx;
+      height: 120rpx;
+      border-radius: 10rpx;
+    }
+  }
+  .title-img {
+    width: 330rpx;
+    height: 98rpx;
+    margin: 40rpx auto;
+    display: block;
+  }
+  .prize-box {
+    margin: 0 30rpx;
+    .header {
+      height: 98rpx;
+    }
+    .content {
+      padding: 0 30rpx 50rpx 30rpx;
+      background-size: 100% 100%;
+
+      .th {
+        background: linear-gradient(90deg, #EFC495 0%, #F3E8B7 50%, #EFC495 100%);
+        padding: 16rpx 0;
+      }
+
+      .td {
+        padding: 20rpx 0;
+        color: #fff;
+        border-bottom: 1rpx solid #F0CE98;
+      }
+
+    }
+    .footer {
+      height: 68rpx;
+      color: #F7DCA2;
+      text-align: center;
+
+      .tips {
+        transform: translateY(-18rpx);
+      }
+    }
+  }
+  .btn-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30rpx;
+    .btn {
+      width: 190rpx;
+      height: 90rpx;
+      border-radius: 45rpx;
+      font-size: 36rpx;
+      &.plain {
+        border: 4rpx solid #FFE3BF;
+        background: linear-gradient(180deg, #CF110D 0%, #A90804 100%);
+        color: #fff;
+      }
+      &.active {
+        background: linear-gradient(180deg, #FFF3DD 0%, #FFD39E 100%);
+        color: #A90804;
+      }
+    }
+  }
+}
+.bgs {
+  background-size: 100% 100%;
+}
+
+.flex-half{
+  flex: .5;
+}

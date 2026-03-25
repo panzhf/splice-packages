@@ -1,0 +1,48 @@
+@import '../../../styles/mixins.scss';
+// 颜色放到uni-scss里
+/* #ifdef MP-CLOUDSHOP */
+.bg-f{
+  background-color: #fff;
+}
+/* #endif */
+.bd-e {
+  @include border-bottom(#e5e5e5)
+}
+.primary-color{
+  color: var(--theme-color, $uni-color-primary);
+}
+.bgc-primary {
+  /*  #ifdef MP-RETAIL  */
+  background-color: var(--theme-color, $uni-bg-color-primary);
+  /*  #endif  */
+  /*  #ifdef MP-MEMBER || MP-CLOUDSHOP  */
+  background-color: #ffb423;
+  /*  #endif  */
+}
+.c-red {
+  color: #ff5c53;
+}
+
+/* #ifndef MP-RETAIL */
+.edit-color {
+  color: #0F80FF;
+}
+/* #endif */
+/* #ifdef MP-SALE */
+.detail-wrapper, .getList-wrapper, .container-header {
+  background-color: #F6F7FC !important;
+}
+.page-custom-color{
+  background-color: #F6F7FC;
+}
+// 缺失的公用类
+.c-3 {
+  color: #333;
+}
+.c-red {
+  color: #ff960d;
+}
+.ub-f1 {
+  flex: 1;
+} 
+/* #endif */

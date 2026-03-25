@@ -1,0 +1,72 @@
+{
+  "CodeNotEnabled": {
+    "page": [
+      {
+        "id": 0,
+        "code": "PageSetting",
+        "name": "页面设置",
+        "sort": 0,
+        "data": "{\"Title\":\"码未启用\",\"Remark\":\"\",\"PageBgColor\":\"#f1f4ff\",\"BgColor\":\"#f1f4ff\",\"FrontColor\":\"#000000\",\"bgUrl\":\"\",\"statusColor\":\"#000000\"}"
+      },
+      {
+        "id": 0,
+        "code": "CodeNotEnabled",
+        "name": "码未启用",
+        "sort": 1,
+        "data": "{\"textColor\":\"#000\",\"textFontSize\":16,\"fontWeight\":\"bold\",\"showAntiFake\":true,\"showBatch\":true,\"showNumber\":true,\"showConfig\":true,\"showTime\":true,\"infoColor\":\"#7580A3\",\"topGap\":80}"
+      }
+    ]
+  },
+  "CodeUnknown": {
+    "page": [
+      {
+        "id": 0,
+        "code": "PageSetting",
+        "name": "页面设置",
+        "sort": 0,
+        "data": "{\"Title\":\"异常提示\",\"Remark\":\"\",\"PageBgColor\":\"#f1f4ff\",\"BgColor\":\"#f1f4ff\",\"FrontColor\":\"#000000\",\"bgUrl\":\"\",\"statusColor\":\"#000000\"}"
+      },
+      {
+        "id": 0,
+        "code": "CodeUnknown",
+        "name": "异常提示",
+        "sort": 1,
+        "data": "{\"textColor\":\"#000\",\"textFontSize\":16,\"fontWeight\":\"bold\",\"showTime\":true,\"infoColor\":\"#7580A3\",\"topGap\":80}"
+      }
+    ]
+  },
+  "GuideDisabled": {
+    "page": [
+      {
+        "id": 0,
+        "code": "PageSetting",
+        "name": "页面设置",
+        "sort": 0,
+        "data": "{\"Title\":\"导购员账户被禁用\",\"Remark\":\"\",\"PageBgColor\":\"#f1f4ff\",\"BgColor\":\"#f1f4ff\",\"FrontColor\":\"#000000\",\"bgUrl\":\"\",\"statusColor\":\"#000000\"}"
+      },
+      {
+        "id": 0,
+        "code": "GuideDisabled",
+        "name": "账户被禁用",
+        "sort": 1,
+        "data": "{\"tipsText\":\"啊哦，你的导购员身份被禁用了！\",\"textColor\":\"#000\",\"textFontSize\":16,\"fontWeight\":\"bold\",\"topGap\":80}"
+      }
+    ]
+  },
+  "ScanPage": [
+    {
+      "id": 0,
+      "code": "PageSetting",
+      "name": "页面设置",
+      "sort": 0,
+      "data": "{\"Title\":\"导购员账户被禁用\",\"Remark\":\"\",\"PageBgColor\":\"#f1f4ff\",\"BgColor\":\"#f1f4ff\",\"FrontColor\":\"#000000\",\"bgUrl\":\"\",\"statusColor\":\"#000000\"}"
+    },
+    {
+      "id": 0,
+      "code": "GuideDisabled",
+      "name": "账户被禁用",
+      "sort": 1,
+      "data": "{\"tipsText\":\"啊哦，你的导购员身份被禁用了！\",\"textColor\":\"#000\",\"textFontSize\":16,\"fontWeight\":\"bold\",\"topGap\":80}"
+    }
+  ]
+}

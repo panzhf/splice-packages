@@ -1,0 +1,77 @@
+@import './common.scss';
+
+.detail-page {
+  padding-bottom: 50rpx;
+}
+
+.info-section {
+  background: #fff;
+  padding: 30rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 6rpx 4rpx rgba(228, 232, 255, 0.6);
+
+  .section-title {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #222; 
+    padding-bottom: 16rpx; 
+  }
+
+  .info-item {
+    display: flex;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+
+    .info-label {
+      width: 150rpx;
+      color: #222;
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      flex: 1;
+      color: #222;
+      word-break: break-all;
+    }
+  }
+  .info-col {
+    display: block;
+    @include border-bottom(#e4e8fe); 
+    margin-bottom: 30rpx;
+    padding-bottom: 20rpx;
+    .info-label {
+      width: 100%;
+    }
+  }
+
+  .customer-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 8rpx;
+    margin-right: 20rpx;
+  }
+
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rpx;
+
+    .image-item {
+      width: 127rpx;
+      height: 127rpx;
+      border-radius: 8rpx;
+    }
+  }
+
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .textarea-value {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+}
+

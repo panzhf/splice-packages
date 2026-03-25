@@ -1,0 +1,89 @@
+.box {
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  /* #ifdef MP-SALE */
+  box-shadow: 0 0 6rpx 0 rgba(50, 70, 195, 0.1);
+  /* #endif */
+  & + .box {
+    margin-top: 20rpx;
+  }
+}
+.pd-info {
+  padding: 30rpx 20rpx;
+  /* #ifdef MP-RETAIL */
+  margin-top: 20rpx;
+  /* #endif */
+  /* #ifdef MP-SALE */
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  border-bottom: 4rpx solid $uni-color-primary;
+  /* #endif */
+  .cover {
+    width: 120rpx;
+    height: 120rpx;
+  }
+  .name {
+    line-height: 36rpx;
+  }
+}
+.scan-info {
+  padding: 30rpx 20rpx;
+  .scan-btn {
+    padding: 10rpx 20rpx;
+    border-radius: 28rpx;
+    /* #ifdef MP-RETAIL */
+    color: $uni-color-edit;
+    /* #endif */
+    /* #ifdef MP-SALE */
+    color: $uni-color-primary;
+    /* #endif */
+    border: 1px solid currentColor;
+  }
+  .code-record {
+    margin-top: 40rpx;
+    padding-top: 20rpx;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    /* #ifdef MP-RETAIL */
+    color: $uni-color-edit;
+    /* #endif */
+    /* #ifdef MP-SALE */
+    color: $uni-color-primary;
+    /* #endif */
+  }
+}
+.form-info {
+  padding: 0 30rpx;
+  /* #ifdef MP-SALE */
+  .tips {
+    margin-left: 140rpx;
+    font-size: 22rpx;
+    font-weight: 500;
+    color: #ff6955;
+  }
+  /* #endif */
+  .count-tip {
+    color: #ccc;
+  }
+  .custom-input {
+    ::v-deep {
+      .u-form-item::after {
+        border-bottom-width: 0 !important;
+      }
+    }
+  }
+}
+.btn-info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 30rpx 20rpx;
+  .primary-btn + .primary-btn {
+    margin-left: 20rpx;
+  }
+}

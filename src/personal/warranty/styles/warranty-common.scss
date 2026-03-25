@@ -1,0 +1,189 @@
+/* 内容区外边距 */
+.info-content {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.input-content-border {
+  border: 1rpx solid #CCCCCC;
+  width: 90rpx;
+  height: 80rpx;
+  .icon-saoyisaoicon {
+    margin-right: 16rpx;
+  }
+}
+.input-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 60px;
+  height: 100rpx;
+  overflow: hidden;
+
+  .input-check {
+    width: 100%;
+    height: 100rpx;
+    padding-left: 40rpx;
+    padding-right: 180rpx;
+    font-size: 36rpx;
+    background-color: #fff;
+    border-radius: 60px;
+    box-sizing: border-box;
+  }
+  .input-check-empty {
+    padding-right: 100rpx;
+    font-size: 32rpx;
+  }
+  .icon-close-circle {
+    position: absolute;
+    right: 120rpx;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%); 
+  }
+
+  .icon-saoyisaoicon {
+    position: absolute;
+    right: 10rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 40rpx;
+    color: var(--theme-color, $uni-color-primary);
+    padding: 10rpx;
+  }
+  .icon-border-wrap {
+    width: 90rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    border-radius: 35rpx;
+    color: #333333;
+    background: #F5F5F5;
+  }
+}
+
+.check-btn {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+  background: var(--theme-color, $uni-color-primary);
+  border-radius: 45rpx;
+}
+
+/* 信息块 */
+.block {
+  background: #ffffff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  position: relative;
+}
+
+/* 区块标题（带底色条） */
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+
+  &.bg {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 60rpx;
+      height: 8rpx;
+      background: var(--theme-color, #ff7640);
+      opacity: 0.5;
+      border-radius: 4rpx;
+      bottom: 2rpx;
+      left: 0;
+    }
+  }
+}
+
+/* 信息行 */
+.row {
+  display: flex; 
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+
+  .left {
+    width: 170rpx; 
+    vertical-align: top;
+    color: #666666;
+  }
+
+  .right {
+    display: flex;
+    flex: 1; 
+    justify-content: flex-start;
+    word-break: break-all;
+    min-width: 0; 
+    color: #333;
+  }
+}
+
+/* 标签替换说明条 */
+.label-replace-tip {
+  display: flex; 
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: left;
+  padding-left: 20rpx;
+  margin-bottom: 24rpx;
+  background: #FFF5F1; 
+  font-size: 24rpx;
+  color: $uni-color-primary; 
+}
+
+/* 提示行 */
+.tip-row {
+  font-size: 28rpx;
+  color: #999999;
+
+  /* 底部错误提示条（质保查询/换新操作页通用） */
+  &--bottom {
+    padding: 30rpx 20rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: $uni-color-error;
+    background: #fff5f1;
+    text-align: center;
+    border-radius: 10rpx;
+  }
+}
+
+/* 主操作按钮（描边样式） */
+.exchange-btn {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  text-align: center; 
+  color: var(--theme-color, $uni-color-primary);
+  border: 1rpx solid var(--theme-color, $uni-color-primary);
+
+  &.disabled { 
+    color: #CCCCCC; 
+    border-color: #CCCCCC;
+  }
+}
+ 
+.c-6 {
+  color: #888888;
+}

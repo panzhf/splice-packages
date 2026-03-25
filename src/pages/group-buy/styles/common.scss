@@ -1,0 +1,9 @@
+.page-group-buy {
+  min-height: 100vh;
+  /* #ifdef MP-RETAIL */
+  background-color: #f4f4f4;
+  /* #endif */
+  /* #ifdef MP-SALE */
+  background-color: #f6f7fc;
+  /* #endif */
+}

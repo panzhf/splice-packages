@@ -1,0 +1,142 @@
+.group-card {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .content {
+    width: 100%;
+    .receive-view{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .icon{
+        position: absolute;
+        width: 96rpx;
+        height: 84rpx;
+        right: 0;
+      }
+      .explain{
+        top: 30rpx;
+      }
+      .share{
+        top: 150rpx;
+        background-color: transparent;
+      }
+      .scan{
+        position: fixed;
+        width: 120rpx;
+        height: 120rpx;
+        z-index: 9;
+      }
+      .amount{
+        margin: 0 auto;
+        background: #F9532D;
+        border-radius: 21px;
+        border: 1px solid #FFE6BB;
+        height: 42rpx;
+        line-height: 42rpx;
+        padding: 0 64rpx;
+        font-size: 24rpx;
+        color: #FFFFFF;
+        margin-top: 198rpx;
+        margin-bottom: 48rpx;
+      }
+      .card-list{
+        .card-item{
+          display: inline-block;
+          margin-left: 10rpx;
+          position: relative;
+        }
+        .grayscale{
+          filter:grayscale(100%)
+        }
+        .w-174{
+          width: 174rpx;
+        }
+        .card-img{
+          width: 132rpx;
+          height: 174rpx;
+        }
+        .card-name{
+          padding: 0 14rpx;
+          width: 120rpx;
+          height: 42rpx;
+          background-color: rgba(255, 255, 255, 0.7);
+          border-radius: 20rpx;
+          text-align: center;
+          line-height: 42rpx;
+          color: #F9532D;
+          font-size: 22rpx;
+          margin: 16rpx auto 0;
+        }
+      }
+    }
+    .btn-receive {
+      margin: 40rpx auto 0;
+      position: relative;
+      .btn-receive-img{
+        width: 620rpx;
+      }
+      .num{
+        right: 30rpx;
+      }
+      .point-text{
+        right: 30rpx;
+        width: auto;
+        height: auto;
+        border-radius: 20rpx;
+        padding: 10rpx 16rpx;
+        line-height: 14rpx;
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: -10rpx; /* 控制箭头的垂直位置 */
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 10rpx solid transparent;
+          border-right: 10rpx solid transparent;
+          border-top: 10rpx solid #FFE9B9; /* 箭头的颜色 */
+        }
+      }
+    }
+  }
+  .btn-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 48rpx;
+    left: 0;
+    z-index: 30;
+    .btn {
+      width: 320rpx;
+      height: 80rpx;
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
+.num{
+  position: absolute;
+  right: 0;
+  top: -12rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: linear-gradient(0deg, #FFE9B9 0%, #FFFFFF 100%);
+  box-shadow: 1rpx 1rpx 5rpx 0rpx rgba(249,83,45,0.4);
+  border-radius: 50%;
+  border: 2px solid #F19C25;
+  font-size: 22rpx;
+  color: #F9532D;
+  text-align: center;
+  line-height: 36rpx;
+}
+.v-h{
+  visibility: hidden;
+}

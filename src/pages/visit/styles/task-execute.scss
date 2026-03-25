@@ -1,0 +1,116 @@
+@import './common.scss';
+
+.task-execute-page {
+  padding-bottom: 60rpx;
+}
+
+// 抵达签到按钮样式
+.arrive-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 182rpx;
+  height: 68rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+
+  .iconfont {
+    margin-right: 8rpx;
+  }
+
+  &.primary {
+    background: $uni-color-primary;
+    color: #fff;
+  }
+
+  &[disabled] {
+    background-color: #cccccc;
+    color: #fff;
+  }
+}
+.action-btn {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 45rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+
+  border: 1px solid $uni-color-primary;
+  color: $uni-color-primary;
+
+  &.disabled {
+    background: #e0e0e0;
+    color: #999;
+  }
+
+  &.success {
+    background: #e8f5e9;
+    color: #38be55;
+  }
+}
+
+.action-section-left {
+  background-color: $uni-color-primary;
+  border-radius: 40rpx;
+  width: 710rpx;
+  margin: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  &.disabled {
+    background: #cccccc;
+  }
+}
+
+.form-section {
+  background: #fff;
+  padding: 30rpx 30rpx 1rpx 30rpx;
+  margin: 20rpx 20rpx 30rpx 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 6rpx 4rpx rgba(228, 232, 255, 0.6);
+
+  .form-title {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .form-item {
+    margin-bottom: 30rpx;
+
+    .form-label {
+      font-size: 28rpx;
+      color: #222;
+      margin-bottom: 10rpx;
+      display: flex;
+      align-items: center;
+
+      .required {
+        color: #ff6955;
+        margin-right: 4rpx;
+      }
+    }
+
+    .form-desc {
+      font-size: 24rpx;
+      color: #999;
+      margin-bottom: 10rpx;
+    }
+  }
+}
+
+.submit-btn-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  z-index: 100;
+}

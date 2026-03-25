@@ -1,0 +1,109 @@
+@mixin wh($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin lh($height, $lheight: $height) {
+  height: $height;
+  line-height: $lheight;
+}
+
+@mixin whl($width, $height: $width, $lh: $height) {
+  width: $width;
+  @include lh($height, $lh);
+}
+
+@mixin h-cen {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin v-cen {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin hv-cen {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin round($r: 50%) {
+  border-radius: $r;
+}
+
+@mixin box($box: border-box) {
+  box-sizing: $box;
+}
+@mixin bg {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+// 边框
+@mixin border($color: #888, $r: 0) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border: 1px solid $color;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: 2 * $r;
+  }
+}
+// 左边框
+@mixin border-left($color: #888 ,$h: 200%, $left: 0 , $top: 0) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: $h;
+    background: $color;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    left: $left;
+    top: $top;
+  }
+}
+
+// 下边框
+@mixin border-bottom($color: #888) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 1px;
+    background: $color;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+  }
+}
+/*多行省略*/
+@mixin multi-ellipsis($line: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+}
+
+/*背景样式*/
+@mixin background-set($w: 100% 100%, $pos: top center, $rp: no-repeat) {
+  background-size: $w;
+  background-repeat: $rp;
+  background-position: $pos;
+}

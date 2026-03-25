@@ -1,0 +1,116 @@
+{
+  "name": "activity-packages",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "npm run serve:act",
+    "build": "node ./build/clear.js && npm run build:act && node ./resource.config.js",
+    "lint": "eslint --fix --ext .vue,.js src",
+    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+    "dev:custom": "cross-env NODE_ENV=development uniapp-cli custom",
+    "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
+    "serve:scan": "npm run dev:custom h5-scan",
+    "build:scan": "node ./build/clear.js && npm run build:custom h5-scan && node ./resource.config.js",
+    "serve:act": "npm run dev:custom h5-act",
+    "build:act": "npm run build:custom h5-act"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "2.0.0-32920211029004",
+    "@dcloudio/uni-cli-i18n": "2.0.0-32920211029004",
+    "@dcloudio/uni-h5": "2.0.0-32920211029004",
+    "@dcloudio/uni-helper-json": "*",
+    "@dcloudio/uni-i18n": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-360": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-alipay": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-baidu": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-kuaishou": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-qq": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-toutiao": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-vue": "2.0.0-32920211029004",
+    "@dcloudio/uni-mp-weixin": "2.0.0-32920211029004",
+    "@dcloudio/uni-quickapp-native": "2.0.0-32920211029004",
+    "@dcloudio/uni-quickapp-webview": "2.0.0-32920211029004",
+    "@dcloudio/uni-stat": "2.0.0-32920211029004",
+    "@dcloudio/uni-ui": "1.4.6",
+    "@vue/shared": "^3.0.0",
+    "blueimp-md5": "^2.18.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.6",
+    "jweixin-module": "^1.6.0",
+    "miduo-utils": "^1.0.3",
+    "minimist": "^1.2.6",
+    "regenerator-runtime": "^0.12.1",
+    "terser-webpack-plugin": "1.2.1",
+    "tki-qrcode": "^0.1.6",
+    "uview-ui-v1": "1.0.2",
+    "vue": "2.6.14",
+    "vue-danmaku": "^1.2.0",
+    "vue-jsonp": "^2.0.0",
+    "vuex": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/runtime": "~7.12.0",
+    "@dcloudio/types": "*",
+    "@dcloudio/uni-automator": "2.0.0-32920211029004",
+    "@dcloudio/uni-cli-shared": "2.0.0-32920211029004",
+    "@dcloudio/uni-migration": "2.0.0-32920211029004",
+    "@dcloudio/uni-template-compiler": "2.0.0-32920211029004",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "2.0.0-32920211029004",
+    "@dcloudio/vue-cli-plugin-uni": "2.0.0-32920211029004",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "2.0.0-32920211029004",
+    "@dcloudio/webpack-uni-mp-loader": "2.0.0-32920211029004",
+    "@dcloudio/webpack-uni-pages-loader": "2.0.0-32920211029004",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.11.0",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
+    "postcss-comment": "^2.0.0",
+    "prettier": "^2.3.2",
+    "sass": "1.35.2",
+    "sass-loader": "^10",
+    "vue-template-compiler": "2.6.14"
+  },
+  "browserslist": [
+    "Android >= 4.4",
+		"ios >= 9"
+  ],
+  "uni-app": {
+    "scripts": {
+      "h5-act": {
+        "title": "互动营销H5",
+        "env": {
+          "UNI_PLATFORM": "h5"
+        },
+        "define": {
+          "H5-ACT": true
+        }
+      },
+      "h5-scan": {
+        "title": "扫码模板H5",
+        "env": {
+          "UNI_PLATFORM": "h5"
+        },
+        "define": {
+          "H5-SCAN": true
+        }
+      }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "description": ""
+}

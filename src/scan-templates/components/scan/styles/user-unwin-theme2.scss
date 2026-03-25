@@ -1,0 +1,46 @@
+.theme-style-second {
+  .mask {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+  .content {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 50rpx;
+    overscroll-behavior-y: contain !important;
+    .close-btn {
+      top: -100rpx !important;
+    }
+    .pop__content {
+      margin: 320rpx auto 0;
+      min-height: 0 !important;
+      .pop__bg-top-img {
+        width: 620rpx;
+        position: relative !important;
+        transform: none !important;
+      }
+      .auto-jump-text {
+        position: relative !important;
+        width: 620rpx;
+        top: 0;
+        margin: 0 auto;
+      }
+      .pop__content-show {
+        position: relative !important;
+        top: 0 !important;
+        .reuse-text {
+          font-weight: bold;
+          font-size: 32rpx;
+          color: #ffffff;
+          margin-top: 160rpx;
+        }
+        .reuse-time {
+          margin-bottom: 40rpx !important;
+          font-weight: 500;
+          font-size: 24rpx;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}

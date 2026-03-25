@@ -1,0 +1,58 @@
+$memberBtnColor: linear-gradient(90deg, #FFA200 0%, #FFD461 100%);
+$guideBtnColor: linear-gradient(-90deg, #F2BC64 0%, #FFE29A 100%);
+
+@mixin border-bottom($color: #888) {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 1px;
+    background: $color;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.bd-e {
+  @include border-bottom(#e5e5e5)
+}
+.bd-c {
+  @include border-bottom(#ccc)
+}
+
+.safe-btns {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.safe-btn {
+  line-height: 80rpx;
+  border-radius: 45rpx;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.safe-btn[disabled] {
+  opacity: 0.6;
+}
+.safe-btn + .safe-btn {
+  margin-left: 20rpx;
+}
+.back-btn {
+  color: #333;
+  border: 1px solid #AAAAAA;
+  background: #fff;
+}
+.blank-height {
+  height: 130rpx;
+}
+

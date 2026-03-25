@@ -1,0 +1,309 @@
+/* #ifdef H5 */
+page {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  background-color: $uni-bg-color-grey;
+  color: $uni-text-color;
+  font-size: 24rpx;
+}
+
+body {
+  /* #ifdef H5-ACT */
+  height: auto;
+  /* #endif */
+  &::after {
+    // uni-app会加动画，使用的cdn图片无法访问，故屏蔽
+    content: none;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  line-height: 1;
+
+  &::after {
+    border: none;
+  }
+}
+
+image {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+uni-actionsheet .uni-actionsheet {
+  z-index: 999999;
+}
+/* #endif */
+
+/* #ifdef MP-WEIXIN */
+@import './mixins.scss';
+
+page {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  background-color: $uni-bg-color-grey;
+  color: $uni-text-color;
+  font-size: 28rpx;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  line-height: 1;
+
+  &::after {
+    border: none;
+  }
+}
+
+image {
+  display: block;
+  width: 100%;
+}
+/* #endif */
+
+/* 颜色 */
+@each $key,
+  $color
+    in (primary: $uni-color-primary, 'gray': $uni-text-color-grey, 'white': $uni-bg-color, success: $uni-color-success)
+{
+  .#{$key}-color {
+    color: $color;
+  }
+
+  .bg-#{$key} {
+    background-color: $color;
+  }
+}
+
+// iPhoneX底部安全区定义
+.safe-area-inset-bottom {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+// 按钮
+.primary-btn {
+  height: 80rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  background-color: $uni-color-primary;
+  @include box;
+
+  &.disabled {
+    background-color: $uni-text-color-disable;
+  }
+
+  &.plain {
+    border: 1px solid currentColor;
+    background-color: #fff;
+    color: $uni-color-primary;
+  }
+
+  &.round {
+    border-radius: 44rpx;
+  }
+
+  &.size-medium {
+    font-size: 30rpx;
+    @include lh(60rpx);
+  }
+
+  &.size-small {
+    font-size: 28rpx;
+    @include lh(50rpx);
+  }
+}
+
+// 悬浮底部按钮，建议搭配 bottom-footer-gap 填充空白区域
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: $uni-bg-color;
+
+  .footer-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    height: 100%;
+    font-size: 32rpx;
+
+    &.active {
+      background-color: $uni-color-primary;
+      color: #fff;
+    }
+
+    &.success-active {
+      background-color: $uni-color-success;
+      color: #fff;
+    }
+
+    &.disabled {
+      background-color: $uni-text-color-disable;
+      color: #fff;
+    }
+  }
+}
+
+.bottom-footer-gap {
+  margin-top: 20rpx;
+  height: 100rpx;
+  height: calc(100rpx + constant(safe-area-inset-bottom));
+  height: calc(100rpx + env(safe-area-inset-bottom));
+}
+
+
+/* 字体 边框 */
+// font-size 16 到 36
+@for $fs from 8 through 18 {
+  .fs-lh-#{$fs * 2} {
+    font-size: $fs * 2rpx;
+    @extend .line-height;
+  }
+
+  .fs-#{$fs * 2} {
+    font-size: $fs * 2rpx;
+  }
+}
+
+// 圆角 4-20
+@for $r from 2 through 10 {
+  .br-#{$r * 2} {
+    @include round($r * 2rpx);
+  }
+}
+
+// 圆角 50%
+.br-round {
+  @include round;
+}
+
+@each $key in top, right, bottom, left {
+  .border-#{$key} {
+    border-#{$key}: 1rpx solid $uni-border-color;
+  }
+}
+
+/* 其他 */
+.overflow-h {
+  overflow: hidden;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.wb-ba {
+  word-break: break-all;
+}
+
+.line-height {
+  line-height: 1;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-normal {
+  font-weight: normal;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+/* 布局 对齐 */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+@each $key, $value in (between: space-between, center: center, around: space-around, end: flex-end) {
+  .flex-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key in 1, 2, 3, 4, none, auto {
+  .flex-#{$key} {
+    flex: $key;
+  }
+}
+
+@each $key in left, center, right, justify {
+  .text-#{$key} {
+    text-align: $key;
+  }
+}
+
+@for $num from 1 through 5 {
+  @each $key, $value in (t: top, r: right, b: bottom, l: left) {
+    .m#{$key}-#{$num * 10} {
+      margin-#{$value}: $num * 10rpx;
+    }
+
+    .p#{$key}-#{$num * 10} {
+      padding-#{$value}: $num * 10rpx;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+@import '@/styles/mixins.scss';
+
+// ==================== 页面基础样式 ====================
+.page {
+  background-color: #f6f7fc;
+}
+
+// ==================== 头部区域 ====================
+.header-box {
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 4rpx solid $uni-color-primary;
+
+  .search {
+    display: flex;
+    margin: 20rpx 20rpx 15rpx;
+    vertical-align: top;
+
+    .search-picker {
+      width: 150rpx;
+      margin-right: 20rpx;
+    }
+
+    .search-input {
+      flex: 1;
+    }
+  }
+}
+
+// ==================== 排序标签 ====================
+.sort-tab-box {
+  margin: 20rpx;
+}
+
+.sort-tab-item {
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #222;
+  position: relative;
+
+  &.active {
+    color: $uni-color-primary;
+  }
+
+  .caret-wrapper {
+    width: 20rpx;
+    height: 30rpx;
+  }
+}
+
+.sort-caret {
+  width: 0;
+  height: 0;
+  border-left: 6rpx solid transparent;
+  border-right: 6rpx solid transparent;
+  transition: all 0.3s;
+
+  &.ascending {
+    border-bottom: 8rpx solid #ccc;
+    margin-bottom: 2rpx;
+
+    &.active {
+      border-bottom-color: $uni-color-primary;
+    }
+  }
+
+  &.descending {
+    border-top: 8rpx solid #ccc;
+
+    &.active {
+      border-top-color: $uni-color-primary;
+    }
+  }
+}
+
+// ==================== 客户列表样式 ====================
+.customer-content {
+  position: relative;
+  min-height: 120rpx;
+  padding-right: 90rpx;
+}
+
+.distance-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: 200rpx;
+  text-align: right;
+
+  .visit-status {
+    color: #666;
+
+    &.not-visited {
+      color: #222222;
+    }
+
+    &.visited-today {
+      color: #FF960D;
+    }
+
+    &.visited-before {
+      color: #FF5C53;
+    }
+  } 
+}
+
+// ==================== 拜访记录样式 ====================
+.record-content {
+  position: relative; 
+  
+  .customer-name {
+    padding-right: 100rpx;
+    line-height: 30rpx;
+  }
+}
+
+.record-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: 200rpx;
+  text-align: right;
+
+  .visit-status {
+    color: #666;
+    line-height: 30rpx;
+
+    &.visited {
+      color: #222222;
+    }
+
+    &.visiting {
+      color: #FF960D;
+    }
+  }
+}
+.customer-name {
+  min-height: 40rpx;
+}
+
+.record-info-box {
+  position: relative;
+
+  .icon-record-detail {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.record-info {  
+  view {
+    margin-bottom: 8rpx;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ==================== 图标样式 ====================
+.icon-detail {
+  position: absolute;
+  right: 20rpx;
+  bottom: 0;
+  line-height: 30rpx;
+}
+
+// ==================== 新增按钮 ====================
+.add-btn {
+  position: fixed;
+  right: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: $uni-color-primary;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0rpx 4rpx 12rpx rgba(50, 70, 195, 0.4);
+  z-index: 99;
+}
+
+// ==================== 空数据 ====================
+.none-data {
+  margin-top: 200rpx;
+}
+
+// ==================== 组件样式覆盖 ====================
+::v-deep .list {
+  margin-bottom: 20rpx !important;
+  box-shadow: 0px 0px 6px 0px rgba(50, 70, 195, 0.1);
+}

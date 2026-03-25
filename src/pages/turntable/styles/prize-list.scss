@@ -1,0 +1,304 @@
+@import 'packages/styles/mixins.scss';
+$prefix: prize-list;
+.#{$prefix} {
+  padding-bottom: 20rpx;
+  .header {
+    padding: 20rpx 36rpx;
+    .title {
+      position: relative;
+      padding: 0 24rpx;
+      @include lh(60rpx);
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 30rpx solid transparent;
+        left: 100%;
+        top: 0;
+      }
+    }
+    .desc-icon {
+      @include whl(34rpx);
+    }
+  }
+  .list {
+    margin-top: 26rpx;
+    padding: 0 36rpx;
+    .prize-item {
+      height: 106rpx;
+      padding: 0 40rpx 0 20rpx;
+      @include round(24rpx);
+      & + .prize-item {
+        margin-top: 36rpx;
+      }
+      .icon {
+        @include wh(60rpx);
+      }
+      .name {
+        margin-top: 4rpx;
+      }
+    }
+  }
+  &.skin-0, &.skin-1, &.skin-2, &.skin-9 {
+    .header {
+      .title {
+        background-color: #fecd32;
+        color: #b3241c;
+        &::after {
+          border-left-color: #fecd32;
+        }
+      }
+    }
+  }
+  &.skin-1, &.skin-2, &.skin-3, &.skin-9 {
+    .header {
+      .desc {
+        color: #fff;
+      }
+      .desc-icon {
+        color: #fff;
+      }
+    }
+  }
+  &.skin-0 {
+    .header {
+      .desc {
+        color: #ffdc44;
+      }
+      .desc-icon {
+        color: #ef5034;
+        background-color: #fff;
+      }
+    }
+    .list {
+      .prize-item {
+        background-color: #ffe3a9;
+        box-shadow: 0 12rpx 0 rgba(134, 26, 20, 0.5);
+        &:first-of-type {
+          .name {
+            color: #ffa500;
+          }
+        }
+        .name {
+          color: #ff6124;
+        }
+      }
+    }
+  }
+  &.skin-1, &.skin-9 {
+    .header {
+      .desc-icon {
+        background-color: #ff8d97;
+      }
+    }
+    .list {
+      .prize-item {
+        background-color: #fff;
+        box-shadow: 0 12rpx 0 rgba(212, 7, 26, 0.6);
+        .name {
+          color: #be5050;
+        }
+      }
+    }
+  }
+  &.skin-2 {
+    .header {
+      .desc-icon {
+        background-color: #007023;
+      }
+    }
+    .list {
+      .prize-item {
+        background-color: #fff;
+        box-shadow: 0 12rpx 0 rgba(0, 104, 32, 0.6);
+        .name {
+          color: #fc880f;
+        }
+      }
+    }
+  }
+  &.skin-3 {
+    .header {
+      .desc-icon {
+        background-color: #1a8c35;
+      }
+      .title {
+        background-color: #1a8c35;
+        color: #fff;
+        filter: drop-shadow(0 4rpx 2rpx rgba(0, 0, 0, 0.8));
+        &::after {
+          border-left-color: #1a8c35;
+        }
+      }
+    }
+    .list {
+      .prize-item {
+        background-color: #b8ffc3;
+        box-shadow: 0 12rpx 0 rgba(0, 104, 32, 0.6);
+        border: 1px solid #0f531e;
+        .title {
+          font-weight: bold;
+          color: #1f3421;
+        }
+        .name {
+          color: #1c5c00;
+        }
+      }
+    }
+  }
+  &.skin-4 {
+    .header {
+      .title {
+        background-color: #a4dfad;
+        color: #fff;
+        &::after {
+          border-left-color: #a4dfad;
+        }
+      }
+      .desc {
+        color: #fff;
+      }
+      .desc-icon {
+        color: #83bdf3;
+        background-color: #fff;
+      }
+    }
+    .list {
+      .prize-item {
+        background-color: #e8f4de;
+        box-shadow: 0 12rpx 0 #fff;
+        .title {
+          font-weight: bold;
+          color: #333;
+        }
+        .name {
+          color: #7e8876;
+        }
+      }
+    }
+  }
+  &.skin-5 {
+    position: relative;
+    margin-top: -88rpx;
+    .header {
+      padding: 20rpx 30rpx 0 30rpx;
+      .title-icon {
+        @include wh(194rpx, 52rpx);
+      }
+      .explain-icon {
+        @include wh(147rpx, 32rpx);
+      }
+    }
+    .list {
+      .prize-item {
+        height: 126rpx;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #4d2800;
+        .icon, .info {
+          margin-top: -12rpx;
+        }
+        .title {
+          font-weight: bold;
+        }
+        &+.prize-item {
+          margin-top: 24rpx;
+        }
+      }
+    }
+  }
+  &.skin-6 {
+    .title-icon {
+      @include wh(248rpx, 60rpx);
+    }
+    .explain-icon {
+      position: absolute;
+      @include wh(120rpx, 118rpx);
+      z-index: 1;
+      top: 12rpx;
+      right: 4rpx;
+    }
+    .list {
+      .prize-item {
+        position: relative;
+        z-index: 0;
+        background: linear-gradient(to bottom, #ffdb34 , #ffc436);
+        color: #4d2800;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          @include round(24rpx);
+          border: 1px solid #b16600;
+          border-bottom: 8rpx solid #fff;
+          box-shadow: 0 0 6px #b96f0a;
+        }
+        .title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &.skin-7 {
+    .title-icon {
+      @include wh(242rpx, 154rpx);
+    }
+    .explain-icon {
+      position: absolute;
+      @include wh(120rpx, 118rpx);
+      z-index: 1;
+      top: 12rpx;
+      right: 4rpx;
+    }
+    .list {
+      .prize-item {
+        height: 136rpx;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #fff;
+        box-shadow: 0 12rpx 12rpx rgba(208, 208, 208, 1);
+        border-bottom: 12rpx solid #fff;
+        .icon, .info {
+          margin-top: 10rpx;
+        }
+      }
+    }
+  }
+  &.skin-8 {
+    margin-top: 60rpx;
+    .title-icon {
+      @include wh(332rpx, 38rpx);
+    }
+    .explain-icon {
+      position: absolute;
+      @include wh(131rpx, 156rpx);
+      z-index: 1;
+      top: 0;
+      right: 6rpx;
+    }
+    .list {
+      .prize-item {
+        height: 146rpx;
+        padding-left: 36rpx;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @include box(10rpx);
+        .title {
+          font-weight: bold;
+          color: #fff;
+          font-size: 30rpx;
+        }
+        .name {
+          margin-top: 8rpx;
+          font-weight: 500;
+          color: #671d17;
+        }
+      }
+    }
+  }
+}

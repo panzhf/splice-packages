@@ -1,0 +1,72 @@
+@import 'packages/styles/mixins.scss';
+$prefix: page-tap;
+.#{$prefix} {
+  /* #ifdef H5 */
+  max-width: 960rpx;
+  margin: 0 auto;
+  /* #endif */
+  min-height: 100vh;
+  .bg {
+    position: absolute;
+    width: 100%;
+    /* #ifdef H5 */
+    max-width: 960rpx;
+    margin-bottom: -100rpx;
+
+    transform: translateY(-100rpx);
+    /* #endif */
+  }
+  .p-r{
+    position: relative;
+  }
+  .main {
+    position: relative;
+  }
+  .count-box-placeholder {
+    /* #ifdef MP-WEIXIN */
+    margin-top: 450rpx;
+    /* #endif */
+    /* #ifdef H5 */
+    margin-top: 348rpx;
+    /* #endif */
+  }
+  .rule {
+    position: absolute;
+    right: 0;
+    /* #ifdef MP-WEIXIN */
+    top: 172rpx;
+    /* #endif */
+    /* #ifdef H5 */
+    top: 72rpx;
+    /* #endif */
+    z-index: 10;
+    @include wh(50rpx, 160rpx);
+  }
+  /* #ifdef MP-WEIXIN */
+  .share {
+    position: absolute;
+    right: 0;
+    top: 347rpx;
+    z-index: 10;
+    @include wh(50rpx, 130rpx);
+    background-size: cover;
+    background-color: transparent;
+  }
+  /* #endif */
+  .btn-group {
+    position: fixed;
+    left: 0;
+    bottom: 20rpx;
+    z-index: 30;
+    @include wh(100%, 120rpx);
+    .icon {
+      @include wh(320rpx, 86rpx);
+      & + .icon {
+        margin-left: 30rpx;
+      }
+    }
+  }
+  // .footer-gap {
+  //   @include wh(100%, 160rpx);
+  // }
+}

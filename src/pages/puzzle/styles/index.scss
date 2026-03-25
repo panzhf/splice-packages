@@ -1,0 +1,265 @@
+@import 'packages/styles/mixins.scss';
+$prefix: puzzle-page;
+$color1: #ffdcab;
+$color2: #ca3c1c;
+.#{$prefix} {
+  /* #ifdef H5 */
+  max-width: 960rpx;
+  margin: 0 auto;
+  /* #endif */
+  min-height: 100%;
+  .bg {
+    position: absolute;
+    width: 100%;
+    /* #ifdef H5 */
+    max-width: 960rpx;
+    margin-bottom: -100rpx;
+
+    transform: translateY(-100rpx);
+    /* #endif */
+  }
+  .main {
+    position: relative;
+  }
+  .rule {
+    position: absolute;
+    /* #ifdef H5 */
+    top: 46rpx;
+    /* #endif */
+    right: 18rpx;
+
+    @include wh(158rpx, 54rpx);
+  }
+  .puzzle-wrapper {
+    position: relative;
+    /* #ifdef H5 */
+    margin-top: 330rpx;
+    /* #endif */
+    /* #ifdef MP-WEIXIN */
+    margin-top: 430rpx;
+    /* #endif */
+
+    &.skin1 {
+      /* #ifdef H5 */
+      margin-top: 1067rpx;
+      /* #endif */
+      /* #ifdef MP-WEIXIN */
+      margin-top: 1167rpx;
+      /* #endif */
+    }
+
+    .puzzle-content {
+      margin: 0 auto;
+
+      border-radius: 0 0 16rpx 16rpx;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @include wh(696rpx, 776rpx);
+    }
+    .count {
+      padding: 0 20rpx;
+
+      letter-spacing: 4rpx;
+
+      color: $color1;
+
+      font-weight: 500;
+
+      @include lh(68rpx, 76rpx);
+    }
+    .image-list {
+      position: relative;
+
+      display: grid;
+
+      @include box();
+      padding: 24rpx 40rpx 20rpx 36rpx;
+
+      grid-gap: 8rpx;
+    }
+    .image-item {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 8rpx;
+      .img-wrapper {
+        transform: scale(0.333);
+        transform-origin: 0 0;
+
+        border-radius: 8rpx;
+      }
+      .prize-icon-box {
+        position: absolute;
+        z-index: 10;
+        right: 10rpx;
+        bottom: 10rpx;
+
+        border: 2rpx solid $color2;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0px 1rpx 10rpx 0px #c92f00;
+
+        @include wh(70rpx);
+        &.animation-flash {
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            content: '';
+            animation: flash 1s 4 cubic-bezier(0, 0, 0.18, 0.88);
+
+            border-radius: 50%;
+
+            transform-origin: center;
+
+            @include wh(100%);
+          }
+          .icon {
+            animation: swing 1s 4 linear;
+          }
+        }
+        .icon {
+          transform-origin: center;
+          @include wh(50rpx);
+        }
+      }
+      .cover {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        border-radius: 8rpx;
+        &.animation-flip {
+          animation: flip 0.8s linear 1 normal forwards;
+        }
+      }
+    }
+  }
+  .time-box {
+    margin: 8rpx auto 0;
+
+    color: $color1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    font-weight: bold;
+
+    @include whl(720rpx, 88rpx, 84rpx);
+
+    &.skin1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      /* #ifdef MP-WEIXIN */
+      top: 492rpx;
+      /* #endif */
+      /* #ifdef H5 */
+      top: 392rpx;
+      /* #endif */
+    }
+  }
+  .score-box {
+    position: relative;
+    @include wh(340rpx, 88rpx);
+    margin: 8rpx auto 30rpx;
+  }
+  .score-btn {
+    @include wh(340rpx, 88rpx);
+  }
+  .ad-container {
+    margin-top: 14rpx;
+  }
+
+  .btn-group {
+    position: fixed;
+    left: 0;
+    bottom: 20rpx;
+    z-index: 30;
+    @include wh(100%, 115rpx);
+    .icon {
+      @include wh(240rpx, 80rpx);
+      & + .icon {
+        margin-left: 100rpx;
+      }
+    }
+  }
+  .footer-gap {
+    /* #ifdef MP-WEIXIN */
+    @include wh(100%, 135rpx);
+    /* #endif */
+    /* #ifdef H5 */
+    @include wh(100%, 68px);
+    /* #endif */
+  }
+  .page-cover {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes flip {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1) rotateY(3deg);
+  }
+  40% {
+    transform: scale(0.8) rotateY(30deg);
+  }
+  99% {
+    transform: scale(0.6) rotateY(80deg) skewY(8deg);
+
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 4rpx 4rpx rgba(202, 60, 28, 0.8);
+  }
+
+  50%,
+  75% {
+    box-shadow: 0 0 20rpx 20rpx rgba(202, 60, 28, 1);
+  }
+
+  78%,
+  100% {
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}

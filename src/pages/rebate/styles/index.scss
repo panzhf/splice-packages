@@ -1,0 +1,186 @@
+@import 'packages/styles/mixins.scss';
+.guessing{
+  min-height: 100vh;
+  position: relative;
+  /* #ifdef H5 */
+  // margin-top: -80rpx;
+  /* #endif */
+  .footer-gap {
+    /* #ifdef MP-WEIXIN */
+    @include wh(100%, 135rpx);
+    /* #endif */
+    /* #ifdef H5 */
+    @include wh(100%, 68px);
+    /* #endif */
+  }
+  .share-button{
+    position: absolute;
+    /* #ifdef H5 */
+    top: 46rpx;
+    /* #endif */
+    right: 0;
+    @include wh(109rpx, 90rpx);
+  }
+  .rule {
+    position: absolute;
+    /* #ifdef H5 */
+    top: 46rpx;
+    /* #endif */
+    right: 0;
+    @include wh(50rpx, 160rpx);
+  }
+  .my-prize {
+    position: absolute;
+    left: 0;
+    @include wh(200rpx, 130rpx);
+  }
+  .look-record {
+    position: absolute;
+    right: 0;
+    @include wh(132rpx, 62rpx);
+  }
+  .bg {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    /* #ifdef H5 */
+    // max-width: 960rpx;
+    // margin-bottom: -100rpx;
+    // transform: translateY(-100rpx);
+    /* #endif */
+  }
+  .rank-list ::v-deep .bubble-wrap {
+
+    /* #ifdef MP-WEIXIN */
+    top: 805rpx !important;
+    /* #endif */
+    /* #ifdef H5 */
+    top: 650rpx !important;;
+    /* #endif */
+  }
+  .btn-group {
+    position: fixed;
+    left: 0;
+    bottom: 20rpx;
+    z-index: 30;
+    @include wh(100%, 115rpx);
+    .icon {
+      @include wh(320rpx, 80rpx);
+      & + .icon {
+        margin-left: 50rpx;
+      }
+    }
+  }
+  .content{
+    z-index: 1;
+    .button-img{
+      width: 600rpx;
+      height: 153rpx;
+      margin: 0 auto;
+      display: block;
+    }
+    .p-r{
+      position: relative;
+    }
+    .activity-state{
+      width: 640rpx;
+      height: 160rpx;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      font-size: 40rpx;
+      font-family: PingFang SC;
+      font-weight: bold;
+      color: #7A93C9;
+      line-height: 140rpx;
+      text-align: center;
+      margin: 0 auto;
+      overflow: hidden;
+      display: block;
+      .tips-time{
+        font-size: 32rpx;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: #7A93C9;
+        line-height: 30rpx;
+        margin-top: 30rpx;
+      }
+    }
+    .content-box{
+      .button-box{
+        display: flex;
+        font-size: 28rpx;
+        font-family: PingFang SC;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #277DF5;
+        justify-content: center;
+        .two{
+          margin-left: 65rpx;
+        }
+      }
+      .tips{
+        margin-top: 27rpx;
+        padding:0 60rpx;
+        text-align: center;
+        font-size: 24rpx;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #4D628E;
+      }
+      .awards-box{
+        width: 654rpx;
+        padding: 30rpx 0;
+        // height: 189px;
+        background: #FFFFFF;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 5rpx 10rpx 0px rgba(44,141,247,0.26);
+        border-radius: 20rpx;
+        margin: 68rpx auto 0;
+        position: relative;
+        .header-img{
+          width: 210rpx;
+          height: 105rpx;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          position: absolute;
+          left: -6rpx;
+          top: -40rpx;
+          font-size: 30rpx;
+          font-family: PingFang SC;
+          font-weight: bold;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 66rpx;
+        }
+        .row{
+          display: flex;
+          margin-top: 40rpx;
+          .prize-icon{
+            margin-left: 60rpx;
+            width: 68rpx;
+            height: 68rpx;
+            background: #EAF4FF;
+            border-radius: 10rpx;
+          }
+          .right{
+            margin-left: 20rpx;
+            .title{
+              font-size: 26rpx;
+              font-family: PingFang SC;
+              font-weight: bold;
+              color: #333333;
+            }
+            .awards{
+              font-size: 24rpx;
+              font-family: PingFang SC;
+              font-weight: 500;
+              color: #333333;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
